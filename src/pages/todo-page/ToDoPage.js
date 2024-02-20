@@ -13,8 +13,8 @@ function ToDoPage() {
   async function fetchTodos() {
     try {
       console.log("Hello world 1 von fetchTodos");
-
       const jsonResponse = await TodosQueries.fetchAllTodos();
+
       console.log("MY JSON RESPONSE", jsonResponse);
 
       setTodos(jsonResponse);
@@ -43,11 +43,18 @@ function ToDoPage() {
   // useEffect
   useEffect(() => {
     fetchTodos();
+
+    TodosQueries.fetchTodoById(1);
   }, []);
+
+  //  // useEffect
+  //  useEffect(() => {
+  //   fetchTodos();
+  // }, []);
 
   //###Ergänzung zum Code vom Unterricht:###
   //Wenn todos noch leer ist, gib leeren Container aus
-  if (todos.length == 0) {
+  if (todos.length === 0) {
     return <div className={styles.mainContainer}></div>;
   }
 

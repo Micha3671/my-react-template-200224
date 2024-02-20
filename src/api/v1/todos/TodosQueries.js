@@ -12,13 +12,13 @@ async function fetchTodoById(todoId) {
   const result = await api.get("/todos/byid", { params: { todoId } });
 
   const todo = result.data.todo;
-
+  console.log("Todo");
   return todo;
 }
 // GET-Anfrage für "/byuserid"
 async function getTodosByUserId(userId) {
   const result = await api.get("/todos/byuserid", {
-    params: { userId: userId },
+    params: { userId },
   });
 
   const todos = result.data.todos;
