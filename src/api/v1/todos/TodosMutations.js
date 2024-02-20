@@ -40,4 +40,6 @@ async function deleteTodo(todoId) {
   return result.data;
 }
 
+console.log("Hello people");
+
 export default { createTodo, markTodoAsCompleted, updateTodo, deleteTodo };

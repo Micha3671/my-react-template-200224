@@ -34,19 +34,17 @@ function ToDoPage() {
       })
       .then((todosJson) => {
         console.log("Hello world 3 von alternativeFetchTodos");
-        // setTodos(todosJson);
+        setTodos(todosJson);
       });
-
-    console.log("Hello world 1 von alternativeFetchTodos");
   }
 
   // useEffect
   useEffect(() => {
     fetchTodos();
-
+    console.log("Hello world 1 von alternativeFetchTodos");
     TodosQueries.fetchTodoById(1);
   }, []);
-
+  console.log("Hello world 9 von alternativeFetchTodos");
   //  // useEffect
   //  useEffect(() => {
   //   fetchTodos();
