@@ -21,7 +21,7 @@ async function getTodosByUserId(userId) {
     params: { userId },
   });
 
-  const todos = result.data.todos;
+  const todos = result.data;
 
   return todos;
 }
